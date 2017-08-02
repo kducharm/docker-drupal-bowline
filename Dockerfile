@@ -43,7 +43,6 @@ RUN pecl install xdebug-2.5.0 \
 	&& docker-php-ext-enable xdebug
 RUN \
   echo xdebug.remote_enable=1 >> /usr/local/etc/php/conf.d/xdebug.ini && \
-  echo xdebug.remote_connect_back=1 >> /usr/local/etc/php/conf.d/xdebug.ini && \
   echo xdebug.remote_autostart=0 >> /usr/local/etc/php/conf.d/xdebug.ini && \
   echo xdebug.max_nesting_level=256 >> /usr/local/etc/php/conf.d/xdebug.ini && \
   echo xdebug.remote_log=/var/www/logs/xdebug.log >> /usr/local/etc/php/conf.d/xdebug.ini
