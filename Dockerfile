@@ -44,6 +44,7 @@ RUN pecl install xdebug-2.5.0 \
 RUN \
   echo xdebug.remote_enable=1 >> /usr/local/etc/php/conf.d/xdebug.ini && \
   echo xdebug.remote_autostart=0 >> /usr/local/etc/php/conf.d/xdebug.ini && \
+  echo xdebug.idekey="PHPSTORM" >> /usr/local/etc/php/conf.d/xdebug.ini && \
   echo xdebug.max_nesting_level=256 >> /usr/local/etc/php/conf.d/xdebug.ini && \
   echo xdebug.remote_log=/var/www/logs/xdebug.log >> /usr/local/etc/php/conf.d/xdebug.ini
 
